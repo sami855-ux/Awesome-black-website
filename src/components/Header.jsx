@@ -1,5 +1,5 @@
 // import { FaArrowDown } from "react-icons/fa6"
-import { FaBinoculars } from "react-icons/fa6"
+import { FaModx } from "react-icons/fa6"
 import { FaBars } from "react-icons/fa6"
 import { FaX } from "react-icons/fa6"
 import PropTypes from "prop-types"
@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <header className="header transparent-local">
       <div className="w-40 h-full flex items-center">
-        <FaBinoculars className="w-16 h-8 text-red-400" />
+        <FaModx className="w-16 h-8 text-orange-600" />
         <h2 className="font-bold font-poppins text-xl tracking-tighter">
           VirtualIR
         </h2>

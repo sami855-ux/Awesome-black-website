@@ -60,6 +60,7 @@ function PricingCard({ stat, price, arrBenefit }) {
         <span className="text-4xl">${price}</span>
         <span className="text-sm text-gray-400">/Month</span>
       </p>
+
       {arrBenefit.map((benfit, i) => (
         <Benefits text={benfit} key={i} />
       ))}

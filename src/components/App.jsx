@@ -3,6 +3,7 @@ import Home from "./Home"
 import Features from "./Featuers"
 import WorkFlow from "./WorkFlow"
 import Pricing from "./Pricing"
+import Testmonial from "./Testmonial"
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <Features />
       <WorkFlow />
       <Pricing />
+      <Testmonial />
     </>
   )
 }
