@@ -40,7 +40,7 @@ function BoxOne() {
     <div className="w-full lg:w-3/4 h-1/2 flex justify-center items-center flex-col">
       <h2 className="text-4xl md:text-6xl font-poppins text-center">
         VirtualIR build tools{" "}
-        <span className="bg-gradient-to-r from-orange-500 to-orange-700 text-transparent bg-clip-text">
+        <span className="textClip">
           for <br /> developers
         </span>
       </h2>

@@ -45,3 +45,6 @@ body {
 .feature-hieght {
   height: calc(100vh - 150px);
 }
+.textClip {
+  @apply bg-gradient-to-r from-orange-400 to-orange-700 text-transparent bg-clip-text;
+}
