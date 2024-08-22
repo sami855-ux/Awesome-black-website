@@ -10,6 +10,7 @@ function Featuers() {
   return (
     <section className="w-screen min-h-screen  flex justify-center items-center flex-col">
       <FeaturesHeader />
+      <CardConatiner />
     </section>
   )
 }
@@ -21,39 +22,44 @@ function FeaturesHeader() {
       <h1 className="font-poppins text-3xl md:text-5xl text-center mb-5">
         Easily build <span className="textClip">your code</span>
       </h1>
-      <div className="w-full lg:w-3/4 flex items-center justify-center flex-wrap md:space-x-2 mt-5">
-        <Card
-          icon={<FaTaxi color="#c7460e" />}
-          header="Drag and Drop Interface"
-          paraText=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere addicta non cupiditate libero ipsum praesentium amet nostrum."
-        />
-        <Card
-          icon={<FaGears color="#c7460e" />}
-          header="Multi-Platform Compatablity"
-          paraText="Some layers add not only a header to the front, but also a trailer to the end. When it hits the bottom, the physical layer actually 
+    </div>
+  )
+}
+
+function CardConatiner() {
+  return (
+    <div className="w-full lg:w-3/4 flex items-center justify-center flex-wrap md:space-x-2 mt-5">
+      <Card
+        icon={<FaTaxi color="#c7460e" />}
+        header="Drag and Drop Interface"
+        paraText=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere addicta non cupiditate libero ipsum praesentium amet nostrum."
+      />
+      <Card
+        icon={<FaGears color="#c7460e" />}
+        header="Multi-Platform Compatablity"
+        paraText="Some layers add not only a header to the front, but also a trailer to the end. When it hits the bottom, the physical layer actually 
 "
-        />
-        <Card
-          icon={<FaShield color="#c7460e" />}
-          header="Built-in Template"
-          paraText="The application layer software then adds a header to the front of the message and passes the resulting message across the layer 6/7 interface to the presentation layer. "
-        />
-        <Card
-          icon={<FaBatteryFull color="#c7460e" />}
-          header="Real Time Perview"
-          paraText="When the message arrives at machine 2, it is passed upward, with each layer stripping off and examining its own header."
-        />
-        <Card
-          icon={<FaBug color="#c7460e" />}
-          header="Collabration Tool"
-          paraText="When the message arrives at machine 2, it is passed upward, with each layer stripping off and examining its own header."
-        />
-        <Card
-          icon={<FaMap color="#c7460e" />}
-          header="Analytics Dashboard"
-          paraText="When the message arrives at machine 2, it is passed upward, with each layer stripping off and examining its own header."
-        />
-      </div>
+      />
+      <Card
+        icon={<FaShield color="#c7460e" />}
+        header="Built-in Template"
+        paraText="The application layer software then adds a header to the front of the message and passes the resulting message across the layer 6/7 interface to the presentation layer. "
+      />
+      <Card
+        icon={<FaBatteryFull color="#c7460e" />}
+        header="Real Time Perview"
+        paraText="When the message arrives at machine 2, it is passed upward, with each layer stripping off and examining its own header."
+      />
+      <Card
+        icon={<FaBug color="#c7460e" />}
+        header="Collabration Tool"
+        paraText="When the message arrives at machine 2, it is passed upward, with each layer stripping off and examining its own header."
+      />
+      <Card
+        icon={<FaMap color="#c7460e" />}
+        header="Analytics Dashboard"
+        paraText="When the message arrives at machine 2, it is passed upward, with each layer stripping off and examining its own header."
+      />
     </div>
   )
 }
