@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text-color: #fff;
+  --bg-primary: #211f1f;
+  --secondary-text-color: #333;
+  --bg-secondary: #ffffff;
+}
+@font-face {
+  font-family: monstera;
+  src: url(../font/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: poppins;
+  src: url(../font/Poppins-Regular.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-color);
+}
+.btn {
+  @apply bg-gradient-to-r from-orange-500 to-orange-800 mx-2 w-[150px] px-2 py-2 rounded-md font-poppins text-xs text-center;
+  background-color: transparent;
+}
+.header {
+  @apply w-screen h-16  flex items-center px-5 lg:px-32 justify-between sticky top-0 left-0 border-b border-gray-800;
+}
+.transparent-local {
+  background-color: rgba(33, 31, 31, 0.9);
+}
+.home {
+  height: calc(100vh - 64px);
+}
+.feature-hieght {
+  height: calc(100vh - 150px);
+}
