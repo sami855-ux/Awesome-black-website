@@ -65,7 +65,7 @@ function CardConatiner() {
 }
 
 Card.propTypes = {
-  icon: PropTypes.func,
+  icon: PropTypes.object,
   header: PropTypes.string,
   paraText: PropTypes.string,
 }
