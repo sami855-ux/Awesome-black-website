@@ -74,7 +74,9 @@ function CardTe({ text, imgSrc, name, title }) {
         </span>
         <div className="flex flex-col">
           <h2 className="font-monstera font-thin text-xs">{name}</h2>
-          <p className="font-monstera font-thin text-xs">{title}</p>
+          <p className="font-monstera font-thin text-xs tracking-wide">
+            <i>{title}</i>
+          </p>
         </div>
       </div>
     </div>
