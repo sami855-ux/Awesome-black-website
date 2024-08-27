@@ -2,15 +2,23 @@
 import { FaModx } from "react-icons/fa6"
 import { FaBars } from "react-icons/fa6"
 import { FaX } from "react-icons/fa6"
+import { FaSun } from "react-icons/fa6"
+import { FaMoon } from "react-icons/fa6"
 import PropTypes from "prop-types"
 import { useState } from "react"
 
-export default function Header() {
+Header.propTypes = {
+  onTheme: PropTypes.func,
+  theme: PropTypes.bool,
+}
+
+export default function Header({ onTheme, theme }) {
   const [isOpen, setIsOpen] = useState(false)
 
   function handelOpen() {
     setIsOpen((curr) => !curr)
   }
+
   return (
     <header className="header transparent-local">
       <div className="w-40 h-full flex items-center">
@@ -35,6 +43,13 @@ export default function Header() {
         <Link text="Testimonial" link="index.html" />
       </ul>
       <div className="hidden md:flex items-center">
+        <span className="w-5 h-5 cursor-pointer mr-5" onClick={onTheme}>
+          {theme ? (
+            <FaSun height={50} className="w-full h-full" />
+          ) : (
+            <FaMoon height={50} className="w-full h-full" />
+          )}
+        </span>
         <ButtonHeader width={70} bgColor="transparent">
           Sign in
         </ButtonHeader>

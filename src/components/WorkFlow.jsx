@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 function WorkFlow() {
   return (
     <div className="w-screen min-h-screen flex justify-center items-center flex-col mt-20 pt-20">
-      <h1 className="text-3xl md:text-5xl font-poppins mb-7 text-center">
+      <h1 className="text-3xl md:text-5xl font-poppins mb-10 text-center">
         Accelerating your
         <span className="textClip"> code workflow</span>
       </h1>

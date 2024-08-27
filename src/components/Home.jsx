@@ -1,4 +1,5 @@
 import PropTypes from "prop-types"
+import { useState } from "react"
 
 function Home() {
   return (
@@ -50,10 +51,10 @@ function BoxOne() {
         consequuntur temporibus? Accusantium officia autem excepturi?
       </p>
       <section className="flex justify-center items-center space-x-4">
-        <button className="px-5 py-2 font-poppins text-xs border border-orange-700 rounded-md bg-gradient-to-r from-orange-500 to-orange-700">
+        <button className=" px-5 py-2 font-poppins text-xs border border-orange-700 rounded-md bg-gradient-to-r from-orange-500 to-orange-700">
           Start for free
         </button>
-        <button className="px-5 py-2 font-poppins text-xs border border-orange-700 rounded-md">
+        <button className="hover:bg-orange-500 hover:text-white transition-all ease-in duration-100 px-5 py-2 font-poppins text-xs border border-orange-700 rounded-md">
           Documentaion
         </button>
       </section>

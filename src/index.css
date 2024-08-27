@@ -8,6 +8,14 @@
   --secondary-text-color: #333;
   --bg-secondary: #ffffff;
 }
+
+#light {
+  --text-color: #211f1f;
+  --bg-primary: #fff;
+  --secondary-text-color: #fff;
+  --bg-secondary: #211f1f;
+}
+
 @font-face {
   font-family: monstera;
   src: url(../font/Montserrat-VariableFont_wght.ttf);
@@ -47,4 +55,8 @@ body {
 }
 .textClip {
   @apply bg-gradient-to-r from-orange-400 to-orange-700 text-transparent bg-clip-text;
+}
+#hover-effect:hover {
+  background-color: #211f1f;
+  color: #fff;
 }
