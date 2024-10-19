@@ -1,5 +1,4 @@
 import PropTypes from "prop-types"
-import { useState } from "react"
 
 function Home() {
   return (
@@ -13,14 +12,10 @@ function Home() {
 function BoxTwo() {
   return (
     <div className="w-[95%] lg:w-3/4 h-1/2 flex justify-center items-center space-x-5 md:mx-16">
-      <Video video="./public/video/vid1.mp4" />
-      <Video video="./public/video/vid2.mp4" />
+      <Video video="/video/vid1.mp4" />
+      <Video video="/video/vid2.mp4" />
     </div>
   )
-}
-
-Video.propTypes = {
-  video: PropTypes.string,
 }
 
 function Video({ video }) {
@@ -36,6 +31,11 @@ function Video({ video }) {
     </section>
   )
 }
+
+Video.propTypes = {
+  video: PropTypes.string,
+}
+
 function BoxOne() {
   return (
     <div className="w-full lg:w-3/4 h-1/2 flex justify-center items-center flex-col">

@@ -1,16 +1,11 @@
-// import { FaArrowDown } from "react-icons/fa6"
+import { useState } from "react"
+import PropTypes from "prop-types"
+
 import { FaModx } from "react-icons/fa6"
 import { FaBars } from "react-icons/fa6"
 import { FaX } from "react-icons/fa6"
 import { FaSun } from "react-icons/fa6"
 import { FaMoon } from "react-icons/fa6"
-import PropTypes from "prop-types"
-import { useState } from "react"
-
-Header.propTypes = {
-  onTheme: PropTypes.func,
-  theme: PropTypes.bool,
-}
 
 export default function Header({ onTheme, theme }) {
   const [isOpen, setIsOpen] = useState(false)
@@ -23,12 +18,12 @@ export default function Header({ onTheme, theme }) {
     <header className="header transparent-local">
       <div className="w-40 h-full flex items-center">
         <FaModx className="w-16 h-8 text-orange-600" />
+
         <h2 className="font-bold font-poppins text-xl tracking-tighter">
           VirtualIR
         </h2>
       </div>
 
-      {/*Small scren bar*/}
       <div className="md:hidden cursor-pointer" onClick={handelOpen}>
         {isOpen ? <FaX /> : <FaBars />}
       </div>
@@ -36,12 +31,14 @@ export default function Header({ onTheme, theme }) {
       {isOpen ? <MobileMenu /> : null}
 
       {/*From medium screen and up */}
+
       <ul className="hidden h-full md:flex items-center justify-center">
-        <Link text="Features" link="index.html" />
+        <Link text="Features" link="features" />
         <Link text="WorkFlow" link="index.html" />
         <Link text="Pricing" link="index.html" />
         <Link text="Testimonial" link="index.html" />
       </ul>
+
       <div className="hidden md:flex items-center">
         <span className="w-5 h-5 cursor-pointer mr-5" onClick={onTheme}>
           {theme ? (
@@ -50,15 +47,22 @@ export default function Header({ onTheme, theme }) {
             <FaMoon height={50} className="w-full h-full" />
           )}
         </span>
+
         <ButtonHeader width={70} bgColor="transparent">
           Sign in
         </ButtonHeader>
+
         <a href="index.html" className="btn">
           create an acount
         </a>
       </div>
     </header>
   )
+}
+
+Header.propTypes = {
+  onTheme: PropTypes.func,
+  theme: PropTypes.bool,
 }
 
 function MobileMenu() {
@@ -96,6 +100,7 @@ function ButtonHeader({ width, bgColor, children }) {
     width: `${width}px`,
     backgroundColor: `${bgColor}`,
   }
+
   return (
     <button
       style={buttonStyle}
@@ -106,21 +111,26 @@ function ButtonHeader({ width, bgColor, children }) {
   )
 }
 
-Link.propTypes = {
-  text: PropTypes.string,
-  link: PropTypes.string,
-}
-
 function Link({ text, link }) {
+  function handleClick(e) {
+    e.preventDefault()
+  }
+
   return (
     <li className="px-2 mx-2">
       <a
-        href={link}
+        href={`${link}`}
         className="font-poppins font-normal
        text-xs"
+        onClick={handleClick}
       >
         {text}
       </a>
     </li>
   )
+}
+
+Link.propTypes = {
+  text: PropTypes.string,
+  link: PropTypes.string,
 }

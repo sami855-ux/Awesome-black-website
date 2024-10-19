@@ -8,7 +8,10 @@ import PropTypes from "prop-types"
 
 function Featuers() {
   return (
-    <section className="w-screen min-h-screen  flex justify-center items-center flex-col">
+    <section
+      className="w-screen min-h-screen  flex justify-center items-center flex-col"
+      id="features"
+    >
       <FeaturesHeader />
       <CardConatiner />
     </section>
