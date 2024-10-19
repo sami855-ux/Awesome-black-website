@@ -1,6 +1,6 @@
-import React from "react"
-import { FaCircleCheck } from "react-icons/fa6"
 import PropTypes from "prop-types"
+
+import { FaCircleCheck } from "react-icons/fa6"
 
 function WorkFlow() {
   return (
@@ -21,7 +21,7 @@ function ImgWrapper() {
   return (
     <div className=" w-full h-1/2 md:w-1/2 md:h-[70vh]">
       <img
-        src="public/img7.jpeg"
+        src="/img7.jpeg"
         alt="Worflow"
         className="w-full h-full object-cover"
       />

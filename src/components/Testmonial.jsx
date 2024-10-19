@@ -57,13 +57,6 @@ function TestmonialWrapper() {
   )
 }
 
-CardTe.propTypes = {
-  text: PropTypes.string,
-  imgSrc: PropTypes.string,
-  name: PropTypes.string,
-  title: PropTypes.string,
-}
-
 function CardTe({ text, imgSrc, name, title }) {
   return (
     <div className="w-[320px] h-fit p-3 bg-[#252424] rounded-md shadow-md mr-2 border border-[#2e2d2d]">
@@ -81,5 +74,12 @@ function CardTe({ text, imgSrc, name, title }) {
       </div>
     </div>
   )
+}
+
+CardTe.propTypes = {
+  text: PropTypes.string,
+  imgSrc: PropTypes.string,
+  name: PropTypes.string,
+  title: PropTypes.string,
 }
 export default Testmonial

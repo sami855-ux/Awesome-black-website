@@ -1,21 +1,6 @@
 import PropTypes from "prop-types"
 import { FaCircleCheck } from "react-icons/fa6"
 
-function Pricing() {
-  return (
-    <div className="w-screen min-h-screen flex justify-center items-center flex-col space-y-5 mt-16">
-      <h2 className="font-poppins textClip text-4xl">Pricing</h2>
-      <PriceWrapper />
-    </div>
-  )
-}
-
-PricingCard.propTypes = {
-  stat: PropTypes.string,
-  price: PropTypes.number,
-  arrBenefit: PropTypes.array,
-}
-
 const benefitOne = [
   "Private Boarding sharing",
   "5GB Storage",
@@ -36,6 +21,15 @@ const benefitThree = [
   "Advanced Web Analytics",
   "Private Mode",
 ]
+
+function Pricing() {
+  return (
+    <div className="w-screen min-h-screen flex justify-center items-center flex-col space-y-5 mt-16">
+      <h2 className="font-poppins textClip text-4xl">Pricing</h2>
+      <PriceWrapper />
+    </div>
+  )
+}
 
 function PriceWrapper() {
   return (
@@ -72,8 +66,10 @@ function PricingCard({ stat, price, arrBenefit }) {
   )
 }
 
-Benefits.propTypes = {
-  text: PropTypes.string,
+PricingCard.propTypes = {
+  stat: PropTypes.string,
+  price: PropTypes.number,
+  arrBenefit: PropTypes.array,
 }
 
 function Benefits({ text }) {
@@ -85,5 +81,9 @@ function Benefits({ text }) {
       <span className="text-gray-200 text-sm font-poppins">{text}</span>
     </p>
   )
+}
+
+Benefits.propTypes = {
+  text: PropTypes.string,
 }
 export default Pricing

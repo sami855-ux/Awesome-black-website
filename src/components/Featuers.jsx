@@ -1,10 +1,11 @@
+import PropTypes from "prop-types"
+
+import { FaBatteryFull } from "react-icons/fa6"
 import { FaTaxi } from "react-icons/fa6"
 import { FaGears } from "react-icons/fa6"
 import { FaShield } from "react-icons/fa6"
-import { FaBatteryFull } from "react-icons/fa6"
 import { FaBug } from "react-icons/fa6"
 import { FaMap } from "react-icons/fa6"
-import PropTypes from "prop-types"
 
 function Featuers() {
   return (
@@ -67,18 +68,11 @@ function CardConatiner() {
   )
 }
 
-Card.propTypes = {
-  icon: PropTypes.object,
-  header: PropTypes.string,
-  paraText: PropTypes.string,
-}
-
 function Card({ icon, header, paraText }) {
   return (
     <section className="w-[330px] h-40 flex space-y-5 p-2 flex-col">
       <div className="w-full h-fit flex space-x-3 items-start">
         <span className="flex justify-center items-center p-1 w-8 h-7 rounded-full bg-[#282626]">
-          {" "}
           {icon}
         </span>
 
@@ -87,5 +81,11 @@ function Card({ icon, header, paraText }) {
       <p className="pl-10 font-poppins text-gray-300 text-xs">{paraText}</p>
     </section>
   )
+}
+
+Card.propTypes = {
+  icon: PropTypes.object,
+  header: PropTypes.string,
+  paraText: PropTypes.string,
 }
 export default Featuers
